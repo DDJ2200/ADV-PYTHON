@@ -1,0 +1,31 @@
+##Date and Time
+
+
+#program to demonstrate /retive current date and show appropiate greet message
+
+import datetime
+d1=datetime.datetime.now()
+h=d1.hour
+if(h>5 and h<12):
+    print("good morning")
+elif ():
+    print("good afternoon")
+else:
+    print("good evening")
+
+#program to show the use of time delta and find the difference between current date and the users birthday(dd/mm/yy)
+    
+from datetime import datetime
+dt1=datetime(2005,5,25)
+today=datetime.now()
+if dt1>today:
+    print("date1 is greater than date2")
+else:
+    print("date1 is lower than date2")
+
+#program to stop the execuation of a program tempoaryly
+    
+import time
+print("Before the sleep statement")
+time.sleep(5)
+print("after the sleep statement")
