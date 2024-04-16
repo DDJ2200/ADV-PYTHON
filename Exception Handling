@@ -1,9 +1,15 @@
+#Exception
+
+
+#program to raise an exception
+
 try:
     num = int(input("Please enter number: "))
     print("num = ",num)
 except ValueError:
     print("wrong value")
     
+#program to raise an exception given that rollno. is valid if it is in the rande of (1-120)
 
 try:
     num=int(input("enter roll number:"))
@@ -16,6 +22,8 @@ except:
     print("wrong value")
 
 
+#program to input number from user raise an exception if it is invalid use finally to print end of the program
+
 try:
     n=int(input("enter numeric value:"))
     print("you have entered correct value")
@@ -26,6 +34,8 @@ else:
 finally:
     print("end of the program")
 
+
+#program to emplement user defined exception
 
 class userdefinedException(Exception):
     def __init__(self,msg):
@@ -38,3 +48,6 @@ try:
         print("you have entered correct value")
 except userdefinedException as u:
     print(u.message)
+
+    
+    
