@@ -1,3 +1,8 @@
+#GUI python programming
+#gui program in python to design application that demonstrate
+#1]Grid()
+#gui program to design application that demonstrate geometry management
+
 from tkinter import *
 
 root=Tk()
@@ -25,6 +30,9 @@ root.geometry("500x500")
 root.mainloop()
 
 
+
+#2]Place()
+
 from tkinter import *
 
 root=Tk()
@@ -50,6 +58,8 @@ b2.place(x=80,y=70)
 
 root.geometry("100x200")
 root.mainloop()
+
+#3]Pack()
 
 from tkinter import *
 
@@ -77,6 +87,11 @@ b2.pack(side=LEFT,padx=10,pady=10)
 root.geometry("550x250")
 root.mainloop()
 
+
+
+##programs to demonstrate different fonts and colors
+#1]Font
+
 from tkinter import Tk,ttk,font
 
 root=Tk()
@@ -85,6 +100,9 @@ highlightFont=font.Font(family="Helvetica",name="appHighlightFont",size=12,weigh
 ttk.Label(root,text="Attention!",font=highlightFont).grid()
 
 root.mainloop()
+
+
+#2]colors
 
 import tkinter as tk
 
@@ -101,6 +119,8 @@ lb3.pack()
 
 root.mainloop()
 
+
+##programs to demonstrate event handling root.mainloop()
 
 from tkinter import *
 master=Tk()
