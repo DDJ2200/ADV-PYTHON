@@ -1,0 +1,30 @@
+from socket import *
+s=socket(AF_INET,SOCK_STREAM)
+s.bind(("localhost",9999))
+s.listen(5)
+while True:
+    client,addr=s.accept()
+    print(addr,"joined the party")
+    client.send("you have joined seccessully".encode("ascii"))
+client.close()
+
+from socket import*
+s=socket(AF_INET,SOCK_STREAM)
+s.connect(("localhost",9999))
+print(s.recv(1024).decode("ascii"))
+s.close()
+
+from socket import *
+s=socket(AF_INET,SOCK_DGRAM)
+s.bind(("localhost",9999))
+while True:
+    data,addr=s.recvfrom(1024)
+    print(addr,"joined the party")
+    s.sendto("you have joined successfully ".encode("ascii"),addr)
+
+from socket import *
+s=socket(AF_INET,SOCK_DGRAM)
+s.sendto(b"helloserve",("localhost",9999))
+data,addr=s.recvfrom(1024)
+print(data.decode("ascii"))
+s.close()
