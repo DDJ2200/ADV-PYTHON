@@ -1,3 +1,11 @@
+#Networking TCP/UDP
+
+
+#program to create server client and exchange basic information
+#run server on one idle and new file and client on another idle and new file
+#A] TUP using socket_stream
+##server:
+
 from socket import *
 s=socket(AF_INET,SOCK_STREAM)
 s.bind(("localhost",9999))
@@ -8,11 +16,17 @@ while True:
     client.send("you have joined seccessully".encode("ascii"))
 client.close()
 
+
+##client:
+
 from socket import*
 s=socket(AF_INET,SOCK_STREAM)
 s.connect(("localhost",9999))
 print(s.recv(1024).decode("ascii"))
 s.close()
+
+#B] UDP using socket_DCRAM
+##server:
 
 from socket import *
 s=socket(AF_INET,SOCK_DGRAM)
@@ -21,6 +35,9 @@ while True:
     data,addr=s.recvfrom(1024)
     print(addr,"joined the party")
     s.sendto("you have joined successfully ".encode("ascii"),addr)
+
+
+##client:
 
 from socket import *
 s=socket(AF_INET,SOCK_DGRAM)
