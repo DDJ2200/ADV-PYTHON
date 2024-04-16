@@ -1,0 +1,113 @@
+from tkinter import *
+
+root=Tk()
+root.title("LOGIN")
+
+lb1=Label(root,text="I",bg="red",fg="white")
+lb1.grid(row=0,column=0)
+
+el= Entry (root)
+el.grid(row=0,column=1)
+
+lb2=Label(root,text="PASSWARD",bg="red",fg="white")
+lb2.grid(row=1,column=0)
+
+el=Entry(root)
+el.grid(row=1,column=1)
+
+bl=Button(root,text="Cancel",bg="red")
+bl.grid(row=2,column=0)
+
+bl=Button(root,text="LOGIN",bg="green")
+bl.grid(row=2,column=1)
+
+root.geometry("500x500")
+root.mainloop()
+
+
+from tkinter import *
+
+root=Tk()
+root.title("LOGIN")
+
+lbl=Label(root,text="ID",bg="red",fg="white")
+lbl.place(x=10,y=10)
+
+el=Entry(root)
+el.place(x=80,y=10)
+
+lb2=Label(root,text="PASSWORD",bg="red",fg="white")
+lb2.place(x=10,y=40)
+
+e2=Entry(root)
+e2.place(x=100,y=40)
+
+bl=Button(root,text="Cancel",bg="red")
+bl.place(x=10,y=70)
+
+b2=Button(root,text="LOGIN",bg="green")
+b2.place(x=80,y=70)
+
+root.geometry("100x200")
+root.mainloop()
+
+from tkinter import *
+
+root=Tk()
+root.title("LOGIN")
+
+lbl=Label(root,text="ID",bg="red",fg="white")
+lbl.pack(side=LEFT,padx=10,pady=10)
+
+el=Entry(root)
+el.pack(side=LEFT,padx=10,pady=10)
+
+lb2=Label(root,text="PASSWORD",bg="red",fg="white")
+lb2.pack(side=LEFT,padx=10,pady=10)
+
+e2=Entry(root)
+e2.pack(side=LEFT,padx=10,pady=10)
+
+bl=Button(root,text="Ccncel",bg="red")
+bl.pack(side=LEFT,padx=10,pady=10)
+
+b2=Button(root,text="LOGIN",bg="green")
+b2.pack(side=LEFT,padx=10,pady=10)
+
+root.geometry("550x250")
+root.mainloop()
+
+from tkinter import Tk,ttk,font
+
+root=Tk()
+
+highlightFont=font.Font(family="Helvetica",name="appHighlightFont",size=12,weight="bold")
+ttk.Label(root,text="Attention!",font=highlightFont).grid()
+
+root.mainloop()
+
+import tkinter as tk
+
+root=tk.Tk()
+
+lbl=tk.Label(root,text="Red Sun",bg="red",fg="white")
+lbl.pack()
+
+lb2=tk.Label(root,text="Green Grass",bg="green",fg="black")
+lb2.pack()
+
+lb3=tk.Label(root,text="Blue Sky",bg="#0000FF",fg="#FFFFFF")
+lb3.pack()
+
+root.mainloop()
+
+
+from tkinter import *
+master=Tk()
+e=Entry (master)
+e.pack()
+def callback():
+    print(e.get())
+b=Button(master,text="get",width=10,command=callback)
+b.pack()
+mainloop()
