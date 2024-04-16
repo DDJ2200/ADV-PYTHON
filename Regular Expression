@@ -1,3 +1,8 @@
+#Rerular Expression
+
+
+#write a program for validate pincode
+
 import re
 
 def validate_pin(pin):
@@ -13,6 +18,8 @@ if validate_pin(pin):
 else:
     print("Invalid postal code")
 
+
+#write a program to validate mobile number to accept numeric value only 
 
 import re
 def validate_mobile_number(mobile_number):
@@ -30,16 +37,25 @@ else:
     print("Invalid mobile number")
 
 
+
+#write a program to count the number of vowels using regular expression
+
 import re
 def count_vowels(string):
     vowels = re.findall(r'[aeiouAEIOU]', string)
     return len(vowels)
 
+# Take user input
 string = input("Enter a string: ")
 
+# Count vowels
 num_vowels = count_vowels(string)
 
+# Print result
 print(f"Number of vowels in the string: {num_vowels}")
+
+
+#write a program to validate the name
 
 import re
 ip=input("enter input string:")
@@ -48,9 +64,3 @@ if(result == None):
     print("invalid input")
 else:
     print("input acc")
-
-                   
-
-
-    
-    
