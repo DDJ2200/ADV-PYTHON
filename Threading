@@ -1,0 +1,12 @@
+##Threading
+
+
+#program to demonstrate concept of threading and multitasking in python
+
+import threading
+def print_hello(n):
+    print("Hello,hoe old are you?",n)
+t1=threading.Thread(target=print_hello,args=[20,])
+t1.start()
+t1.join()
+print("thank you")
