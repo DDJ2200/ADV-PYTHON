@@ -1,0 +1,56 @@
+##program to implement concept of oops such as
+#1]type of methods
+#2]inheritance
+#3]polymorphism
+
+
+#1]type of methods
+
+class my_class:
+    def instance_method(self):
+        print("this is an instance method")
+    def class_method(cls):
+        print("this is a class method")
+    @staticmethod
+    def static_method():
+        print("this is a static method")
+m1=my_class()
+m1.instance_method()
+my_class.class_method("my_class")
+my_class.static_method()
+
+#2]inheritance
+
+class person:
+    def from_base_class(self):
+        print("this is method from base class")
+class emp(person):
+    def from_derived(self):
+        print("this is method from derived class")
+e1=emp()
+e1.from_base_class()
+e1.from_derived()
+
+#3]polymorphism
+
+class cat:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def info(self):
+        print(f" i am a cat.my name is {self.name}.i am {self.age} years old")
+    def make_sound(self):
+        print("meow")
+class dog:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+    def info(self):
+        print(f" i am a dog.my name is {self.name}.i am {self.age} years old")
+    def make_sound(self):
+        print("bark")
+cat1=cat(" kitty " , 2.5)
+dog1=dog(" fluffy " , 5)
+for animal in(cat1,dog1):
+    animal.info()
+    animal.make_sound()
