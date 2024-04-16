@@ -1,4 +1,3 @@
-
 F1=input("enter the file name:")
 File__object=open(F1,'r')
 r=File__object.read(50)
