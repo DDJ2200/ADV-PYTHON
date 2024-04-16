@@ -1,0 +1,56 @@
+import re
+
+def validate_pin(pin):
+    pattern = re.compile('^[1-9][0-9]{5}$')
+    if pattern.match(pin):
+        return True
+    else:
+        return False
+
+pin = input("Enter your 6-digit Indian postal code: ")
+if validate_pin(pin):
+    print("Valid postal code")
+else:
+    print("Invalid postal code")
+
+
+import re
+def validate_mobile_number(mobile_number):
+    pattern = re.compile(r'^[0-9]{10}$')
+    if pattern.match(mobile_number):
+        return True
+    else:
+        return False
+
+mobile_number = input("Enter your 10-digit mobile number: ")
+
+if validate_mobile_number(mobile_number):
+    print("Valid mobile number")
+else:
+    print("Invalid mobile number")
+
+
+import re
+def count_vowels(string):
+    vowels = re.findall(r'[aeiouAEIOU]', string)
+    return len(vowels)
+
+string = input("Enter a string: ")
+
+num_vowels = count_vowels(string)
+
+print(f"Number of vowels in the string: {num_vowels}")
+
+import re
+ip=input("enter input string:")
+result=re.search(r'[a-z A-Z]*\s*[a-z A-Z]+$',ip)
+if(result == None):
+    print("invalid input")
+else:
+    print("input acc")
+
+                   
+
+
+    
+    
