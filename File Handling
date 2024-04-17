@@ -1,7 +1,7 @@
 #file handling
 
 
-#program to accept the name file from the user,read and display the content of it
+#program to accept the name file from the user,read and display the content of it    (1)
 
 F1=input("enter the file name:")
 File__object=open(F1,'r')
@@ -9,7 +9,7 @@ r=File__object.read(50)
 print("the content read from the file is:",r)
 File__object.close()
 
-#program to accepent file name from user read and write content in it
+#program to accepent file name from user read and write content in it                (2)
 
 f1=input("enter file name:")
 content=input("enter the content:")
@@ -17,7 +17,7 @@ file__object=open(f1,"a+")
 file__object.write(content)
 file__object.close()
 
-#program to reach student details from user and save it into a file
+#program to reach student details from user and save it into a file                  (3)
 #create the empty file in np & save it
 
 fname=input("enter name of the file")
@@ -28,7 +28,7 @@ for i in range(1,3):
     f1.write(str(rno)+" "+sname+"\n")
 f1.close()
 
-#program to read product details from files and print it
+#program to read product details from files and print it                             (4)
 
 f1=open("product.txt","r")
 bill=0
@@ -40,7 +40,7 @@ for record in details:
 print(bill)
 
 
-#program to demonstrate zip and unzip operations of a file.
+#program to demonstrate zip and unzip operations of a file.                          (5)
 
 from zipfile import*
 f=ZipFile("files.zip",'w',ZIP_DEFLATED)
@@ -50,7 +50,7 @@ f.close()
 print("files.zip file created successfully")
 
 
-#for unzipping
+#for unzipping                                                                       (6)
 
 from zipfile import*
 f=ZipFile("files.zip",'r',ZIP_STORED)
